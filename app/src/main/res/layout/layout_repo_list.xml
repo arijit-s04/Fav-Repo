@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:background="?attr/selectableItemBackground"
+    >
+
+    <TextView
+        android:id="@+id/tv_repo_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginVertical="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_toStartOf="@id/iv_send"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:text="Repo Name" />
+
+    <TextView
+        android:id="@+id/tv_repo_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_repo_name"
+        android:layout_alignStart="@id/tv_repo_name"
+        android:layout_alignEnd="@id/tv_repo_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="20sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        tools:text="A quick brown fox jumps over the lazy dog. A quick brown fox jumps over the lazy dog" />
+
+    <ImageView
+        android:id="@+id/iv_send"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:layout_margin="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_baseline_send_24" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_below="@id/tv_repo_desc"
+        android:layout_marginTop="16dp"
+        />
+
+</RelativeLayout>

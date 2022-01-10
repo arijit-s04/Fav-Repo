@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AddRepoFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/owner_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        >
+
+        <EditText
+            android:id="@+id/et_owner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/owner_organisation"
+            android:imeOptions="actionSearch"
+            android:importantForAutofill="no"
+            android:inputType="textNoSuggestions"
+            android:selectAllOnFocus="true"
+            tools:text="Android" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/repo_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_below="@id/owner_input_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        >
+        <EditText
+            android:id="@+id/et_repo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/repo_name"
+            android:imeOptions="actionSearch"
+            android:inputType="textNoSuggestions"
+            android:selectAllOnFocus="true"
+            tools:text="Android"
+            android:importantForAutofill="no" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_add"
+        android:layout_marginBottom="24dp"
+	android:visibility="gone"
+        />
+
+    <ImageButton
+        android:id="@+id/btn_add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_add_24"
+        android:layout_margin="8dp"
+        app:tint="@color/white"
+        app:backgroundTint="@color/design_default_color_primary"
+        android:contentDescription="@null" />
+
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.arijit.githubbrowser.fragments.repolist.RepoListFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_repo_list">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment"
+            />
+        <action
+            android:id="@+id/action_FirstFragment_to_addRepoFragment"
+            app:destination="@id/addRepoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.arijit.githubbrowser.fragments.detail.RepoDetailFragment"
+        android:label="@string/details"
+        tools:layout="@layout/fragment_repo_detail">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <argument
+            android:name="repo"
+            app:argType="com.example.arijit.githubbrowser.models.GithubRepoData" />
+        <action
+            android:id="@+id/action_SecondFragment_to_commitFragment"
+            app:destination="@id/commitFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRepoFragment"
+        android:name="com.example.arijit.githubbrowser.fragments.AddRepoFragment"
+        android:label="@string/add_repo"
+        tools:layout="@layout/fragment_add_repo" >
+        <action
+            android:id="@+id/action_addRepoFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commitFragment"
+        android:name="com.example.arijit.githubbrowser.fragments.CommitFragment"
+        android:label="Commits"
+        tools:layout="@layout/fragment_commit" >
+        <action
+            android:id="@+id/action_commitFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment"
+            app:popUpTo="@id/SecondFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="branchName"
+            app:argType="string"
+            android:defaultValue="master" />
+    </fragment>
+</navigation>
