@@ -32,6 +32,8 @@
         android:layout_margin="10dp"
         app:tabGravity="fill"
         app:tabIndicator="@null"
+        app:tabBackground="@drawable/tab_selector"
+        app:tabSelectedTextColor="@color/white"
         app:tabMaxWidth="0dp"
         android:layout_below="@id/tv_repo_desc"
         />

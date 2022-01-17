@@ -23,6 +23,7 @@ class CommitListAdapter: ListAdapter<CommitData, CommitListAdapter.CommitViewHol
 
     override fun onBindViewHolder(holder: CommitViewHolder, position: Int) {
         holder.bind(getItem(position))
+        holder.itemView.setOnClickListener{}
     }
 
     class CommitViewHolder(private val binding: LayoutCommitListBinding):

@@ -23,6 +23,7 @@ class IssueListAdapter: ListAdapter<IssueData, IssueListAdapter.IssueViewHolder>
 
     override fun onBindViewHolder(holder: IssueViewHolder, position: Int) {
         holder.bind(getItem(position))
+        holder.itemView.setOnClickListener{}
     }
 
     class IssueViewHolder(private val binding: LayoutIssueListBinding): RecyclerView.ViewHolder(binding.root) {
